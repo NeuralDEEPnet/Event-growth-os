@@ -15,7 +15,7 @@ const state = {
   sources: [],
   answer: '',
   query: '',
-  email: '',
+  email: 'hello@neuraldeep.net',
   emailStatus: '',
   logs: [],
   completed: [],
@@ -137,7 +137,7 @@ function render(){
       </section>
       <section class="panel architecture"><span class="kicker">NO FAKE DATA PATH</span><h2>Brief → WebMCP → live search → source crawl → ranking → email</h2><div class="flow">${['EVENT BRIEF','WEBMCP TOOL','LIVE WEB','SOURCE CRAWL','FIT ANALYSIS','EMAIL EXPORT'].map((x,i)=>`<div class="${state.completed[i<5?tools[i]:'export_research_email']?'on':''}"><b>0${i+1}</b><span>${x}</span></div>`).join('')}</div></section>
       ${state.error?`<div class="error">⚠ ${esc(state.error)}</div>`:''}
-      <footer><span>EVENT GROWTH OS · WEBMCP</span><span>LIVE WEB RESEARCH · HUMAN APPROVAL FOR EXTERNAL SEND</span></footer>
+      <footer><span>EVENT GROWTH OS · WEBMCP</span><span>LIVE WEB RESEARCH · HUMAN CONTROL · ${esc(state.email)}</span></footer>
     </main>
   </div>`;
   document.querySelector('#run')?.addEventListener('click',runAgent);
